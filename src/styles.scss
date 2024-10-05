@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+  scrollbar-width: thin;
+  scrollbar-color: #1E293B #475569;
+}*/
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: #475569;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: #394454;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: #394454;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: #1E293B;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #1E293B;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #1E293B;
+  }
+  
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    @apply bg-slate-50 text-slate-950
+}
+
+.box-animetion {
+    @apply h-1 bg-slate-500 w-2;
+    animation: an 10s ease-in-out alternate infinite;
+}
+
+@keyframes an {
+    0% {
+        width: 0px;
+    }
+
+    33% {
+        width: 320px;
+    }
+
+    66% {
+        width: 75px;
+    }
+
+    100% {
+        width: 150px;
+    }
+
+}
+
+
+@media screen and (max-width:500px) {
+  #navbar{
+    display: none;
+  }
+  #pages{
+    width: 100%;
+    #home{
+      padding: 0;
+      .p-5{
+        padding: 0;
+      }
+      display: flex;
+      flex-direction: column;
+      padding: 40px 0;
+      .rounded-2xl{
+        border-radius: 0;
+      }
+    }
+    .routerLink-b{
+      display: none;
+    }
+  }
+}

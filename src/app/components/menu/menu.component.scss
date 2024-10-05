@@ -1,0 +1,19 @@
+.btn-active {
+    @apply bg-slate-700;
+}
+
+.button:hover {
+    @apply border-solid border-slate-700 border-2;
+}
+
+.button {
+    @apply flex items-center gap-2 p-2 rounded-lg transition border-solid border-slate-950 border-2;
+}
+.text-menu-color{
+    @apply text-slate-700; 
+}
+.btn-active .text-menu-color{
+    @apply text-slate-50; 
+
+}
+

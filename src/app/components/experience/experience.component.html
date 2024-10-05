@@ -1,0 +1,67 @@
+<section id="about" class="w-full h-full bg-slate-950 grid grid-cols-10 grid-rows-10 p-10 pl-1 " >
+    <div class="col-span-9 row-span-2 col-start-2 row-start-1 bg-slate-800 rounded-3xl rounded-b-none p-5 pb-0">
+        <div class="bg-slate-950 w-full h-full rounded-2xl flex text-slate-50 justify-start items-center text-3xl font-extrabold pl-10">
+            <p class="underline decoration-slate-500">My Experience</p>
+            
+        </div>
+    </div>
+    <div class="col-span-10 row-span-6 col-start-1 row-start-3 bg-slate-800 rounded-3xl rounded-bl-none rounded-tr-none p-5">
+        <div class="bg-slate-950 w-full h-full rounded-2xl text-slate-50 p-10 pt-5 text-lg text-justify flex flex-col gap-4 ">
+             <div class="h-full w-full overflow-x-auto ">
+                <ul class="flex gap-5 w-fit h-full p-5">
+                    <li class="w-96 h-full bg-slate-800 rounded-xl p-3 " *ngFor="let company of companies ;">
+                        <div class="w-full h-full bg-slate-950 rounded-lg flex flex-col p-3 relative ">
+                            <h4 class="text-slate-50 text-2xl font-bold">{{company.name}}</h4>
+                            <h4 class="text-slate-50">{{company.position}}</h4>
+                            <p class="text-slate-400 text-base mt-3">{{company.dis}}</p>
+                            <p class="text-slate-600 self-end absolute bottom-2 text-sm">From {{company.Sdate}} to {{company.Edate}}</p>
+                        </div>
+                    </li>
+                </ul>
+             </div>
+        </div>
+    </div>
+    <div class="col-span-9 row-span-2 col-start-1 row-start-9  bg-slate-800 rounded-3xl rounded-t-none p-5 pt-0">
+        <div class="bg-slate-950 w-full h-full rounded-2xl flex justify-center items-center">
+            <app-apps-contact></app-apps-contact>
+        </div>
+    </div>
+    <div class="col-start-1 row-start-2 relative">
+        <div class="bg-transparent rounded-br-3xl shadow-[20px_20px_0_0] shadow-slate-800 absolute w-full h-full bottom-0 right-0">
+        </div>
+    </div>
+    <div class="col-start-1 row-start-1  flex items-start pr-4 relative cursor-pointer" [routerLink]="['/skills']">
+        
+        <div
+            class="w-[85%] h-[100px] bg-slate-800 rounded-3xl rounded-bl-none flex justify-center items-center text-slate-50 ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+                <path d="M12 4L12 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M16.9998 8.99996C16.9998 8.99996 13.3174 4.00001 11.9998 4C10.6822 3.99999 6.99982 9 6.99982 9"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div
+            class="absolute h-full top-[100px] w-1/2 z-50 bg-transparent rounded-tl-3xl shadow-[0px_-25px_0_0] shadow-slate-800 ">
+        </div>
+    </div>
+    <div class="col-start-10 row-start-9 relative">
+        <div class="bg-transparent rounded-tl-3xl shadow-[-20px_-20px_0_0] shadow-slate-800 absolute w-full h-full top-0 left-0">
+
+        </div>
+    </div>
+    <div class="col-start-10 row-start-10 flex items-end justify-end pl-4 relative cursor-pointer" [routerLink]="['/projects']">
+        <div
+            class="absolute h-full bottom-[100px] w-1/2 z-50 bg-transparent rounded-br-3xl shadow-[0px_25px_0_0] shadow-slate-800 ">
+        </div>
+        <div
+            class="w-[85%] h-[100px] bg-slate-800 rounded-3xl rounded-tr-none flex justify-center items-center text-slate-50 ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25" height="25" fill="none">
+                <path d="M12 20L12 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M17 15C17 15 13.3175 20 11.9999 20C10.6823 20 6.99997 15 6.99997 15" stroke="currentColor"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+    </div>
+</section>
