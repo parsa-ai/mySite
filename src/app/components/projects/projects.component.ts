@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { AppsContactComponent } from '../../apps-contact/apps-contact.component';
 import { RouterLink } from '@angular/router';
 import { NgFor } from '@angular/common';
+import { AnimetionComponent } from "../animetion/animetion.component";
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [RouterLink, AppsContactComponent ,NgFor] ,
+  imports: [RouterLink, AppsContactComponent, NgFor, AnimetionComponent] ,
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })

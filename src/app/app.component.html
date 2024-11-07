@@ -1,6 +1,25 @@
-<div id="body" class=" h-screen flex bg-slate-950 relative snap-y snap-mandatory">
-  <app-menu></app-menu>
-  <main id="pages" class="w-4/5 h-full bg-slate-950 right-0 absolute" >
+<div [hidden]="!is_Loaded">
+  <div id="body" class=" h-screen flex bg-slate-950 relative snap-y snap-mandatory" *ngIf="isItNotMobile;else mobileV">
+    <app-menu></app-menu>
+    <main id="pages" class="w-4/5 h-full bg-slate-950 right-0 absolute">
       <router-outlet></router-outlet>
-  </main>
+    </main>
+  </div>
+  <ng-template #mobileV>
+    <div class="w-full h-full bg-slate-950 flex justify-center items-center text-slate-400 text-xl ">
+      <p class="text-center"><span class="text-slate-50 font-bold">Mobile</span> & <span
+          class="text-slate-50 font-bold">Tablet</span> Coming Soon
+        <br>
+        Please use <span class="underline decoration-slate-500 text-slate-50 font-bold">Loptap</span> :)
+      </p>
+
+    </div>
+  </ng-template>
+</div>
+<div class="w-full h-full bg-slate-950 flex justify-center items-center text-slate-400 text-xl " [hidden]="is_Loaded">
+  <div class="loader">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
 </div>

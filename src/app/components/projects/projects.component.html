@@ -1,14 +1,14 @@
 <section id="skill" class="w-full h-full bg-slate-950 p-10 pl-1 grid grid-cols-10 grid-rows-10 gap-0">
-    <div class="col-span-9 row-span-2 bg-slate-800 rounded-3xl rounded-b-none p-5">
+    <div class="col-span-9 row-span-2 bg-slate-800 rounded-3xl rounded-b-none p-5 pb-0">
         <div
             class="bg-slate-950 w-full h-full rounded-2xl flex text-slate-50 justify-start items-center text-3xl font-extrabold pl-10">
-            <p class="underline decoration-slate-600">My Skills</p>
+            <p class="underline decoration-slate-600"><app-animetion [targetString]="'My Projects'"></app-animetion></p>
         </div>
     </div>
     <div
         class="col-span-10 row-span-6 col-start-1 row-start-3 bg-slate-800 rounded-3xl rounded-br-none rounded-tl-none p-5  ">
         <div class="bg-slate-950 w-full h-full rounded-2xl text-slate-50 p-10 pt-5 text-lg text-justify flex flex-col gap-4 ">
-            <div class="h-full w-full">
+            <div class="h-full w-full overflow-x-auto">
                <ul class=" flex  gap-5 w-fit h-full p-5">
                    <li class="w-96 h-full bg-slate-800 rounded-xl p-3 " *ngFor="let company of companies ;">
                        <div class="w-full h-full bg-slate-950 rounded-lg flex flex-col p-3 relative ">

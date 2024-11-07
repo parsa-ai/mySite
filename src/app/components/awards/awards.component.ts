@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AppsContactComponent } from "../../apps-contact/apps-contact.component";
 import { NgFor } from '@angular/common';
+import { AnimetionComponent } from "../animetion/animetion.component";
 
 @Component({
   selector: 'app-awards',
   standalone: true,
-  imports: [RouterLink, AppsContactComponent, NgFor],
+  imports: [RouterLink, AppsContactComponent, NgFor, AnimetionComponent],
   templateUrl: './awards.component.html',
   styleUrl: './awards.component.scss'
 })
